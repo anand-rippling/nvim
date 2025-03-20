@@ -21,7 +21,7 @@ return {
       ":lua require'fzf-lua'.lsp_document_symbols({winopts = {preview={wrap='wrap'}}})<cr>",
       { desc = "Document Symbols" }
     )
-    vim.keymap.set("n", "<leader>cr", fzf_lua.lsp_references, { desc = "LSP References" })
+    vim.keymap.set("n", "<leader>lr", fzf_lua.lsp_references, { desc = "LSP References" })
     vim.keymap.set(
       "n",
       "<leader>fd",
