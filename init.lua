@@ -665,7 +665,16 @@ require('lazy').setup({
           autostart = false,
           mason = false,
         },
-        pylsp = {},
+        pylsp = {
+          settings={
+            pylsp = {
+              plugins = {
+                pyflakes = {enabled = false}, 
+                pycodestyle= {enabled = false} 
+              }
+            }
+          }
+        },
         ruff = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs

@@ -11,9 +11,9 @@ return {
     {"stevearc/dressing.nvim"} -- optional: better UI
   },
   config = function()
-    vim.api.nvim_set_keymap('n', "<leader>ab", "<cmd>BookmarksMark<CR>", { desc = "Mark current line into active BookmarkList." })
-    vim.api.nvim_set_keymap('n', "<leader>sb", "<cmd>BookmarksGoto<CR>", { desc = "Go to bookmark at current active BookmarkList" })
-    vim.api.nvim_set_keymap('n', "ma", "<cmd>BookmarksCommands<CR>", { desc = "Find and trigger a bookmark command." })
+    vim.keymap.set({ "n", "v" }, "mm", "<cmd>BookmarksMark<cr>", { desc = "Mark current line into active BookmarkList." })
+    vim.keymap.set({ "n", "v" }, "ms", "<cmd>BookmarksGoto<cr>", { desc = "Go to bookmark at current active BookmarkList" })
+    vim.keymap.set({ "n", "v" }, "ma", "<cmd>BookmarksCommands<cr>", { desc = "Find and trigger a bookmark command." })
     local opts = {} -- check the "./lua/bookmarks/default-config.lua" file for all the options
     require("bookmarks").setup(opts) -- you must call setup to init sqlite db
   end,
