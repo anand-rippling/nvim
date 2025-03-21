@@ -10,7 +10,6 @@ return {
     vim.keymap.set("n", "<leader>fr", fzf_lua.resume, { desc = "FZF Resume" })
     -- Note: Adjusted to avoid conflicts
     vim.keymap.set("n", "<leader>fk", fzf_lua.keymaps, { desc = "Keymaps" })
-    vim.keymap.set("n", "<leader><leader>", fzf_lua.buffers, { desc = "FZF Buffers" })
     vim.keymap.set("n", "<leader>fh", fzf_lua.helptags, { desc = "Help Tags" })
     vim.keymap.set("n", "<leader>gc", fzf_lua.git_bcommits, { desc = "Browse File Commits" })
     vim.keymap.set("n", "<leader>gs", fzf_lua.git_status, { desc = "Git Status" })
