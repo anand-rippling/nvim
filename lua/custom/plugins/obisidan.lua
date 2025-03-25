@@ -25,7 +25,7 @@ return {
       },
     },
     mappings = {
-      ["gf"] = {
+      ["gd"] = {
         action = function()
           return require("obsidian").util.gf_passthrough()
         end,
@@ -44,6 +44,12 @@ return {
         opts = { buffer = true, expr = true },
       },
     },
+    follow_url_func = function(url)
+      vim.fn.jobstart({"open", url})
+    end,
+    follow_img_func = function(img)
+      vim.fn.jobstart { "qlmanage", "-p", img }
+    end,
 
 
 
